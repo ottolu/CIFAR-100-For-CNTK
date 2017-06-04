@@ -31,10 +31,11 @@ def readBatch(src):
 
 def loadData(src):
     print ('Downloading ' + src)
+    fname, h = urlretrieve(src, './delete.me')
     print ('Done.')
     try:
         print ('Extracting files...')
-        with tarfile.open(src) as tar:
+        with tarfile.open(fname) as tar:
             tar.extractall()
         print ('Done.')
         print ('Preparing train set...')
@@ -47,7 +48,8 @@ def loadData(src):
         tst = readBatch('./cifar-100-python/test')
         print ('Done.')
     finally:
-        print ('Fianlly.')
+        print ('Finally.')
+        #os.remove(fname)
     return (trn, tst)
 
 def saveTxt(filename, ndarray):

@@ -49,7 +49,7 @@ def loadData(src):
         print ('Done.')
     finally:
         print ('Finally.')
-        #os.remove(fname)
+        os.remove(fname)
     return (trn, tst)
 
 def saveTxt(filename, ndarray):

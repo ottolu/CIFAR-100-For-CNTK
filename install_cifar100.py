@@ -11,7 +11,7 @@ if __name__ == "__main__":
     print ('Done.')
 
     print ('Converting train data to png images...')
-    #ut.saveTrainImages(r'./Train_cntk_text.txt', 'train')
+    ut.saveTrainImages(r'./Train_cntk_text.txt', 'train')
     print ('Done.')
     print ('Converting test data to png images...')
     ut.saveTestImages(r'./Test_cntk_text.txt', 'test')
